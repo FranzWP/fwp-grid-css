@@ -1,0 +1,37 @@
+{
+  "name": "grid-css-testes",
+  "version": "0.0.1",
+  "description": "Teste com Grid CSS",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FranzWP/fwp-grid-css.git"
+  },
+  "keywords": [
+    "GRID",
+    "CSS"
+  ],
+  "author": "Franz Weber Pimentel",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/FranzWP/fwp-grid-css/issues"
+  },
+  "homepage": "https://github.com/FranzWP/fwp-grid-css#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babelify": "^8.0.0",
+    "browserify": "^15.2.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^1.12.1",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "babel": { "presets": [ "env" ] }
+}
