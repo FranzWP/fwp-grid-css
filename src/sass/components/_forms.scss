@@ -8,21 +8,26 @@ $default-textarea-padding-left: 0.5714em;
 $default-padding-left: 3.4em;
 $default-padding-top: 0;
 
+$default-bg-position: 1.3571em 1em;
+
+//-- General --//
 %form-width
 {
 
-    width: 95%;
+    width: $default-width;
 
 }
 
+//-- Placeholder icon inside form field --//
 %background-icon
 {
 
-    background-position: 1.3571em 1em;
+    background-position: $default-bg-position;
     background-repeat: no-repeat;
 
 }
 
+//-- Mixin icon inside form field --//
 @mixin form-icon($url-icon)
 {
 
@@ -31,6 +36,7 @@ $default-padding-top: 0;
 
 }
 
+//-- Mixin if necessary something diferent of default, like in textarea field --//
 @mixin form-general
 (
 
@@ -47,9 +53,11 @@ $default-padding-top: 0;
     height: $height;
     padding-left: $padding-left;
     padding-top: $padding-top;
+    border: none;
 
 }
 
+//-- Placeholder for group placeholder's field form --//
 %mixin-form-general
 {
 
@@ -73,7 +81,6 @@ input[type="email"]
 
 }
 
-
 textarea
 {
 
@@ -86,8 +93,9 @@ textarea
 button[type="submit"]
 {
 
-    @extend %mixin-form-general;
+    @extend %form-width;
     background-color: rgba(255, 63 ,52, 1);
     color: rgba(255, 255 ,255, 1);
+    margin-bottom: 4em;
 
 }

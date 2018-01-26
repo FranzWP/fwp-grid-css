@@ -1,7 +1,53 @@
+$bg-body: rgba(255, 255 ,255, 1);
+$bg-card: rgba(102, 102 ,102, 1);
+$bg-third-section: rgba(51, 51 ,51, 1);
+$bg-fourth-section: rgba(0, 25 ,62, 1);
+
+$color-body: rgba(102, 102 ,102, 1);
+$color-fourth-section: rgba(255, 255 ,255, 1);
+
+@mixin basic-section($bg-section, $color-font)
+{
+
+    background-color: $bg-section;
+    color: $color-font;
+
+}
+
 body
 {
 
-    background-color: rgba(255, 255 ,255, 1);
-    color: rgba(102, 102 ,102, 1);
+    @include basic-section($bg-body, $color-body);
+
+}
+
+.third-section
+{
+
+    @include basic-section($bg-third-section, $color-fourth-section);
+
+}
+
+.third-section li
+{
+
+    @include basic-section($bg-card, $color-fourth-section);
+    margin: 1.1428em 0.3em 1.1428em 0.3em;
+
+}
+
+.third-section li p
+{
+
+    padding: 0 1.1428em 0 1.1428em;
+    font-size: 1em;
+    text-align: left;
+
+}
+
+.fourth-section
+{
+
+    @include basic-section($bg-fourth-section, $color-fourth-section);
 
 }

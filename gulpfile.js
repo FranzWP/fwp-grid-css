@@ -38,7 +38,7 @@ gulp.task('style', function()
         .pipe( sass( 
             {  
 
-                outputStyle: 'expanded'
+                outputStyle: 'compressed'
 
             }))
         .pipe( autoprefixer ( 
