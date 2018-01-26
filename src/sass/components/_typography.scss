@@ -1,0 +1,69 @@
+//-- Import fonts --//
+@font-face 
+{
+
+    font-family: 'SegoeUI';
+    src:    url('/fonts/segoeui/SegoeUI.eot?#iefix') format('embedded-opentype'),  
+            url('/fonts/segoeui/SegoeUI.woff') format('woff'), url('SegoeUI.ttf')  format('truetype'), 
+            url('/fonts/segoeui/SegoeUI.svg#SegoeUI') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+//-- Headlines font-size, margin and text-align --//
+$h: 'h';
+$h1-size: 26;
+$font-default: 14;
+
+%default-text
+{
+
+    margin: 1em 0;
+    text-align: center;
+
+}
+
+@mixin font-size($font-size)
+{
+
+    font-size: $font-size;
+
+}
+
+@function calc-font($primeiro-valor, $segundo-valor)
+{
+
+    @return (($primeiro-valor * 100) / $segundo-valor) / 100 + em;
+
+}
+
+@for $i from 1 through 6
+{
+
+    #{$h}#{$i}
+    {
+
+        @extend %default-text;
+
+        @include font-size(
+
+            calc-font(
+            (
+
+                $h1-size - ($i * 2)), $font-default
+            
+            )
+                
+        );
+
+    }
+
+}
+
+p
+{
+
+    @extend %default-text;
+
+}

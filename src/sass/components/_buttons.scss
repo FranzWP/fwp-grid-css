@@ -1,0 +1,31 @@
+button
+{
+
+    background-color: rgba(102, 102 ,102, 1);
+    color: rgba(255, 255 ,255, 1);
+    cursor: pointer;
+    padding: 0.3em 2em;
+    border: none;
+    font-size: 1.1428em;
+    display: inline-block;
+    transition: all 0.1s ease-in-out;
+    
+
+}
+
+button:hover
+{
+
+    background-color: rgba(255, 255 ,255, 1);
+    color: rgba(102, 102 ,102, 1);
+    border: none;
+    transform: scale(1.05);
+
+}
+
+button:active
+{
+
+    transform: scale(0.95);
+
+}

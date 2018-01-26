@@ -1,0 +1,59 @@
+%banner-img
+{
+
+    min-height: 200px;
+    width: 100%;
+
+}
+
+@mixin banner-text($top, $right, $bottom, $left)
+{
+
+    padding: $top $right $bottom $left;
+
+}
+
+.first-section
+{
+
+    min-height: 200px;
+    color: rgba(255, 255 ,255, 1);
+    text-align: center;
+
+}
+
+.banner-box
+{
+
+    @extend %banner-img;
+    background-color: rgba(0, 25 ,62, 0.5);
+    
+}
+
+.banner-home
+{
+
+    @extend %banner-img;
+    position: absolute;
+    background: url( '/images/criando-site-html5-css3.jpeg' );
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+
+}
+
+.banner-box > h1
+{
+
+    @include banner-text(0.75em, 0, 0, 0);
+
+}
+
+.banner-box > p
+{
+
+    @include banner-text(0, 2em, 0, 2em);
+    margin: -0.75em 0 1.5em 0;
+
+}

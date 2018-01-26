@@ -1,7 +1,7 @@
 var gulp                = require( 'gulp' );
 var sass                = require( 'gulp-sass' );
 var rename              = require( 'gulp-rename' );
-var sourcemaps              = require( 'gulp-sourcemaps' );
+var sourcemaps          = require( 'gulp-sourcemaps' );
 var autoprefixer        = require( 'gulp-autoprefixer' );
 
 var browserify          = require( 'browserify' );
@@ -38,7 +38,7 @@ gulp.task('style', function()
         .pipe( sass( 
             {  
 
-                outputStyle: 'compressed'
+                outputStyle: 'expanded'
 
             }))
         .pipe( autoprefixer ( 
@@ -51,6 +51,7 @@ gulp.task('style', function()
         .pipe( rename ( { suffix: '.min' } ) )
         .pipe( sourcemaps.write( './' ) )
         .pipe( gulp.dest( styleDIST ) );
+        
 
 });
 

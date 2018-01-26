@@ -1,0 +1,93 @@
+$default-width: 95%;
+$default-height: 2.8571em;
+
+$default-textarea-height: 14.2857em;
+$default-textarea-padding-top: 0.8571em;
+$default-textarea-padding-left: 0.5714em;
+
+$default-padding-left: 3.4em;
+$default-padding-top: 0;
+
+%form-width
+{
+
+    width: 95%;
+
+}
+
+%background-icon
+{
+
+    background-position: 1.3571em 1em;
+    background-repeat: no-repeat;
+
+}
+
+@mixin form-icon($url-icon)
+{
+
+    background-image: url($url-icon);
+    @extend %background-icon;
+
+}
+
+@mixin form-general
+(
+
+    $height: $default-height, 
+    $width: $default-width, 
+    $padding-left: $default-padding-left, 
+    $padding-top: $default-padding-top
+
+)
+{
+
+
+    @extend %form-width;
+    height: $height;
+    padding-left: $padding-left;
+    padding-top: $padding-top;
+
+}
+
+%mixin-form-general
+{
+
+    @include form-general();
+
+}
+
+input[type="text"]
+{
+
+    @extend %mixin-form-general;
+    @include form-icon('/fonts/icon/nome.png');
+
+}
+
+input[type="email"]
+{
+
+    @extend %mixin-form-general;
+    @include form-icon('/fonts/icon/email.png');
+
+}
+
+
+textarea
+{
+
+    @include form-general($default-textarea-height, 0, $default-textarea-padding-left, $default-textarea-padding-top);
+    resize: vertical;
+    min-height: $default-textarea-height;
+
+}
+
+button[type="submit"]
+{
+
+    @extend %mixin-form-general;
+    background-color: rgba(255, 63 ,52, 1);
+    color: rgba(255, 255 ,255, 1);
+
+}
